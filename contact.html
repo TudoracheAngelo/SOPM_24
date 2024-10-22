@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Network Course Academy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #ffffff;
+        }
+        header {
+            background-color: #004080;
+            color: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #0059b3;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            padding: 14px 20px;
+            text-decoration: none;
+            color: #ffffff;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #003d66;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #004080;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+		p {
+			max-width: 60%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		ul {
+			list-style-position: inside; /* Makes the bullet align with the text */
+			text-align: center; /* Centers the text inside each list item */
+			padding: 0; /* Removes default padding */
+			margin: 0 auto; /* Centers the list itself */
+		}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>		    <img src="logo.png" width="25" height="25"> Network Course Academy</h1>
+        <p>Empowering learners with top-notch networking courses</p>
+    </header>
+    <nav>
+        <a href="site.html">Home</a>
+        <a href="curs.html">Courses</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content">
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+
+			<p>Have questions or want to learn more about our courses? We're here to help! Reach out to us through any of the following methods, and our friendly support team will get back to you promptly.</p>
+			<br>
+				<ul>
+				<li>Phone: 0777 777 7777</li>
+				<li>Email:<a href="url">office@netacad.com</a></li>
+				<li>Office Address: Str. Castelului nr. 82</li>
+				</ul>
+			<br>
+			<p>Or, fill out the contact form on our website, and we’ll reach out to you within 24 hours. Whether you need guidance on choosing the right course, assistance with enrollment, or have a technical question, we are always happy to help!
+			
+			Follow Us on Social Media: Stay updated on our latest courses, webinars, and industry tips. Connect with us on:</p>
+			<br>
+				<ul>
+				<li>Facebook: [Link]</li>
+				<li>LinkedIn: [Link]</li>
+				<li>Twitter: [Link]</li>
+				</ul>
+			<br>
+			<p>Office Hours: Monday - Friday, 9 AM - 6 PM (Local Time)</a></p>
+        </section>
+    </div>
+	<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+	<br>
+	<br>
+    <footer class="footer">
+        &copy; 2024 Network Course Academy. All Rights Reserved.
+    </footer>
+</body>
+</html>
