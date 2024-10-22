@@ -53,7 +53,18 @@
 			padding: 0; /* Removes default padding */
 			margin: 0 auto; /* Centers the list itself */
 		}
-
+ /* Stil pentru imagine */
+    #movingImage {
+      position: absolute;
+      top: 200px; /* Poți ajusta înălțimea imaginii */
+      left: 0;
+      width: 200px; /* Dimensiunea imaginii */
+    }
+	  body {
+      margin: 0;
+      overflow: hidden; /* Ascunde bara de scroll orizontală */
+    }
+    <
     </style>
 </head>
 <body>
@@ -70,7 +81,19 @@
     <div class="content">
         <section id="home">
             <h2>Welcome to Network Course Academy</h2>
-		    <img src="routers.jpg" width="300" height="168"> 
+		    <br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			
+			
             <p>Your journey to mastering networking starts here. Explore our courses designed for beginners to advanced learners.</p>
 			<p>Empower Your Future with Expert-Led Networking Courses
 
@@ -94,7 +117,33 @@
 			Wireless Networking
 			Network Automation & Scripting</p>
         </section>
-        
+         <img src="routers.jpg" alt="Moving Image" id="movingImage"  width="300" height="168" style="position: absolute; right: 0px; top: 250px;">
+
+  <script>
+    // Inițializează variabilele pentru poziția imaginii și viteza de mișcare
+    var img = document.getElementById("movingImage");
+    var position = 0;
+    var speed = 2; // Viteza imaginii (în pixeli)
+
+    // Funcția care mută imaginea continuu
+    function moveImage() {
+      var imgWidth = img.offsetWidth; // Lățimea imaginii
+      var windowWidth = window.innerWidth; // Lățimea ferestrei
+
+      // Verifică dacă imaginea a ieșit complet din partea dreaptă a ferestrei
+      if (position > windowWidth) {
+        position = -imgWidth; // Resetează poziția la marginea din stânga
+      } else {
+        position += speed; // Mișcă imaginea la dreapta
+      }
+
+      // Actualizează poziția imaginii
+      img.style.left = position + 'px';
+    }
+
+    // Setează un interval pentru a muta imaginea la fiecare 10 milisecunde
+    setInterval(moveImage, 10);
+  </script>
     </div>
 	<br>
 	<br>
